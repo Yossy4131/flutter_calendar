@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'widgets/page_items.dart';
 
@@ -54,17 +53,6 @@ class CalendarPageState extends State<CalendarPage> {
                 focusedDay = focusedDay;
               });
             },
-          ),
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Button(
-                  title: '戻る',
-                  onPressed: () => GoRouter.of(context).pop(),
-                ),
-              ],
-            ),
           ),
         ],
       ),
