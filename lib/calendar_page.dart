@@ -12,12 +12,17 @@ class CalendarPage extends StatelessWidget {
       appBar: AppBar(title: const Text('Calendar Page')),
       body: Stack(
         children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('ここにカレンダーを表示する'),
-              Button(title: '戻る', onPressed: () => GoRouter.of(context).pop()),
-            ],
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('ここにカレンダーを表示する'),
+                Button(
+                  title: '戻る',
+                  onPressed: () => GoRouter.of(context).pop(),
+                ),
+              ],
+            ),
           ),
         ],
       ),

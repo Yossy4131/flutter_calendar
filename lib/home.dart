@@ -14,15 +14,17 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(title: const Text('Calendar')),
       body: Stack(
         children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('Flutter Calendar Demo Page'),
-              Button(
-                title: 'デモページへ',
-                onPressed: () => GoRouter.of(context).push(CalendarPage.path),
-              ),
-            ],
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('Flutter Calendar Demo Page'),
+                Button(
+                  title: 'デモページへ',
+                  onPressed: () => GoRouter.of(context).push(CalendarPage.path),
+                ),
+              ],
+            ),
           ),
         ],
       ),
