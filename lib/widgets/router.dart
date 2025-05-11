@@ -14,7 +14,7 @@ final router = GoRouter(
               MaterialPage(child: HomePage()),
     ),
     GoRoute(
-      path: CalendarPage.path,
+      path: CalendarApp.path,
       pageBuilder:
           (BuildContext context, GoRouterState state) =>
               MaterialPage(child: CalendarPage()),

@@ -6,7 +6,7 @@ import 'package:go_router/go_router.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
-  static const String path = '/';
+  static const String path = '/homepage';
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
                 Text('Flutter Calendar Demo Page'),
                 Button(
                   title: 'デモページへ',
-                  onPressed: () => GoRouter.of(context).push(CalendarPage.path),
+                  onPressed: () => GoRouter.of(context).push(CalendarApp.path),
                 ),
               ],
             ),
