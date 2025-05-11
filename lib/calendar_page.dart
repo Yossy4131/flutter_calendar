@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'widgets/page_items.dart';
 
 class CalendarPage extends StatelessWidget {
   const CalendarPage({super.key});
@@ -14,10 +16,7 @@ class CalendarPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text('ここにカレンダーを表示する'),
-              ElevatedButton(
-                onPressed: () => Navigator.pop(context),
-                child: Text('戻る'),
-              ),
+              Button(title: '戻る', onPressed: () => GoRouter.of(context).pop()),
             ],
           ),
         ],
