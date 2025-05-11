@@ -3,18 +3,16 @@ import 'package:go_router/go_router.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'widgets/page_items.dart';
 
-class CalendarApp extends StatelessWidget{
+class CalendarApp extends StatelessWidget {
   const CalendarApp({super.key});
 
   static const String path = '/calendar';
 
   @override
-  Widget build(BuildContext content){
+  Widget build(BuildContext content) {
     return MaterialApp(
       title: 'Calendar Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.lightBlue
-      ),
+      theme: ThemeData(primarySwatch: Colors.lightBlue),
       home: const CalendarPage(),
     );
   }
@@ -22,7 +20,6 @@ class CalendarApp extends StatelessWidget{
 
 class CalendarPage extends StatefulWidget {
   const CalendarPage({super.key});
-  
 
   @override
   State<CalendarPage> createState() => CalendarPageState();
@@ -45,6 +42,10 @@ class CalendarPageState extends State<CalendarPage> {
             calendarFormat: calendarFormat,
             focusedDay: focusedDay,
             currentDay: currentDay,
+            onFormatChanged:
+                (format) => setState(() {
+                  calendarFormat = format;
+                }),
             onDaySelected: (selectedDay, focusedDay) {
               setState(() {
                 currentDay = selectedDay;
