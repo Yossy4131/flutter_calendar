@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:table_calendar/table_calendar.dart';
 import 'widgets/page_items.dart';
 
 class CalendarPage extends StatelessWidget {
@@ -12,11 +13,15 @@ class CalendarPage extends StatelessWidget {
       appBar: CustomAppBar(title: 'Calendar Demo Page'),
       body: Stack(
         children: [
+          TableCalendar(
+            focusedDay: DateTime.now(),
+            firstDay: DateTime.utc(2000, 1, 1),
+            lastDay: DateTime.utc(2100, 12, 31),
+          ),
           Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('ここにカレンダーを表示する'),
                 Button(
                   title: '戻る',
                   onPressed: () => GoRouter.of(context).pop(),
