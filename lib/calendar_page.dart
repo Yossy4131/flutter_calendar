@@ -37,6 +37,7 @@ class CalendarPageState extends State<CalendarPage> {
       body: Stack(
         children: [
           TableCalendar(
+            locale: 'ja_JP',
             firstDay: DateTime.utc(2000, 1, 1),
             lastDay: DateTime.utc(2100, 12, 31),
             calendarFormat: calendarFormat,
