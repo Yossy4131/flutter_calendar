@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
                 Text('Flutter Calendar Demo Page'),
                 Button(
                   title: 'デモページへ',
-                  onPressed: () => GoRouter.of(context).push(CalendarPage.path),
+                  onPressed: () => GoRouter.of(context).push(CalendarApp.path),
                 ),
               ],
             ),
